@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0A3DA90B-946A-436E-BF61-9DAD1D84BA62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{43C4708C-54DB-434C-906F-B975B725ACEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPal.Core", "src\Server\BudgetPal.Core\BudgetPal.Core.csproj", "{13366D96-1D28-4257-A3AD-EABEF6779D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPal.Core.Tests", "src\Server\BudgetPal.Core.Tests\BudgetPal.Core.Tests.csproj", "{B24DF72B-D1B9-419F-8300-FFFDC9CE6DD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPal.Application", "src\Server\BudgetPal.Application\BudgetPal.Application.csproj", "{1F8C0DED-E65C-4D7C-8AEF-478057C8BDE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPal.API", "src\Server\BudgetPal.API\BudgetPal.API.csproj", "{76B53000-88FF-4C57-9C02-3E05D2236BA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13366D96-1D28-4257-A3AD-EABEF6779D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13366D96-1D28-4257-A3AD-EABEF6779D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13366D96-1D28-4257-A3AD-EABEF6779D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13366D96-1D28-4257-A3AD-EABEF6779D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B24DF72B-D1B9-419F-8300-FFFDC9CE6DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24DF72B-D1B9-419F-8300-FFFDC9CE6DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24DF72B-D1B9-419F-8300-FFFDC9CE6DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24DF72B-D1B9-419F-8300-FFFDC9CE6DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8C0DED-E65C-4D7C-8AEF-478057C8BDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8C0DED-E65C-4D7C-8AEF-478057C8BDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8C0DED-E65C-4D7C-8AEF-478057C8BDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8C0DED-E65C-4D7C-8AEF-478057C8BDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B53000-88FF-4C57-9C02-3E05D2236BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B53000-88FF-4C57-9C02-3E05D2236BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B53000-88FF-4C57-9C02-3E05D2236BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B53000-88FF-4C57-9C02-3E05D2236BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43C4708C-54DB-434C-906F-B975B725ACEF} = {0A3DA90B-946A-436E-BF61-9DAD1D84BA62}
+		{13366D96-1D28-4257-A3AD-EABEF6779D1E} = {43C4708C-54DB-434C-906F-B975B725ACEF}
+		{B24DF72B-D1B9-419F-8300-FFFDC9CE6DD1} = {43C4708C-54DB-434C-906F-B975B725ACEF}
+		{1F8C0DED-E65C-4D7C-8AEF-478057C8BDE2} = {43C4708C-54DB-434C-906F-B975B725ACEF}
+		{76B53000-88FF-4C57-9C02-3E05D2236BA7} = {43C4708C-54DB-434C-906F-B975B725ACEF}
+	EndGlobalSection
+EndGlobal
