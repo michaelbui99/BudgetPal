@@ -1,3 +1,5 @@
+using Core.Models.Common;
+
 namespace Core.Models;
 
 public enum CurrencyCode
@@ -8,7 +10,11 @@ public enum CurrencyCode
     Eur,
 }
 
-public class Currency
+public class Currency: ValueObject
 {
     public CurrencyCode Code { get; set; }
+    protected override IEnumerable<object> GetEqualityComponents()
+    {
+        yield return Code;
+    }
 }

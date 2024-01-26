@@ -6,4 +6,5 @@ public class Budget : AuditableEntity
 {
     public string Name { get; set; } = "Unnamed Budget";
     public ICollection<Account> Accounts { get; set; }
+    public ICollection<CategoryGroup> CategoryGroups { get; set; }
 }
