@@ -14,12 +14,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\V1\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\BudgetPal.Application\BudgetPal.Application.csproj" />
       <ProjectReference Include="..\BudgetPal.Core\BudgetPal.Core.csproj" />
     </ItemGroup>
+
 
 </Project>

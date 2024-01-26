@@ -14,8 +14,15 @@
 
 
 
+
+
     <ItemGroup>
-      <Folder Include="V1\" />
+      <Folder Include="V1\Common\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BudgetPal.Core\BudgetPal.Core.csproj" />
+      <ProjectReference Include="..\BudgetPal.Infrastructure\BudgetPal.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
