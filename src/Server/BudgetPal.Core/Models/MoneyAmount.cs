@@ -4,34 +4,39 @@ namespace Core.Models;
 
 public class MoneyAmount : ValueObject
 {
-    public Currency Currency { get; set; }
+    public CurrencyCode CurrencyCode { get; set; }
     public double Amount { get; set; }
 
 
-    public MoneyAmount(double amount, Currency currency)
+    public MoneyAmount(double amount, CurrencyCode currencyCode)
     {
         Amount = amount;
-        Currency = currency;
+        CurrencyCode = currencyCode;
+    }
+
+    public MoneyAmount()
+    {
+        // For EF
     }
 
     public static MoneyAmount NewDefault()
     {
-        return new MoneyAmount(0, new Currency { Code = Defaults.DefaultCurrencyCode });
+        return new MoneyAmount(0, Defaults.DefaultCurrencyCode);
     }
 
     public string ToSymbolString()
     {
-        return $"{Amount} {Currency.Code.ToSymbol()}";
+        return $"{Amount} {CurrencyCode.ToSymbol()}";
     }
 
     public override string ToString()
     {
-        return $"{Amount} {Currency.Code.ToCodeString()}";
+        return $"{Amount} {CurrencyCode.ToCodeString()}";
     }
 
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Amount;
-        yield return Currency.Code;
+        yield return CurrencyCode;
     }
 }
