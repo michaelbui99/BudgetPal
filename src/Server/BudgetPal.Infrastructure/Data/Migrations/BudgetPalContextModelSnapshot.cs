@@ -8,7 +8,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace BudgetPal.Infrastructure.Migrations
+namespace BudgetPal.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(BudgetPalContext))]
     partial class BudgetPalContextModelSnapshot : ModelSnapshot
@@ -243,7 +243,7 @@ namespace BudgetPal.Infrastructure.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("DateOfBirth")
+                    b.Property<DateTimeOffset?>("DateOfBirth")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
@@ -251,7 +251,6 @@ namespace BudgetPal.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTimeOffset>("LastModified")
@@ -261,7 +260,6 @@ namespace BudgetPal.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Password")

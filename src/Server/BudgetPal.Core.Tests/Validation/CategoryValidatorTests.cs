@@ -19,7 +19,7 @@ public class CategoryValidatorTests
         CategoryValidator validator = new();
 
         // Act
-        ValidatorResult results = validator.Validate(category);
+        ValidatorResult<Category> results = validator.Validate(category);
 
         // Assert
         Assert.Multiple(() =>

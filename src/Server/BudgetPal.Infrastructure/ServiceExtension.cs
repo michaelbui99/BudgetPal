@@ -10,6 +10,7 @@ public static class ServiceExtension
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
     {
         services.AddDbContext<BudgetPalContext>();
+        services.AddScoped<ISaltService, RandomSaltService>();
         services.AddScoped<IHashingService, Pbkdf2HashingService>();
         services.AddScoped<IAuthenticationService, JwtAuthenticationService>();
         return services;

@@ -7,4 +7,5 @@ public static class Defaults
     public static readonly CurrencyCode DefaultCurrencyCode = CurrencyCode.Dkk;
     public static readonly string DefaultJwtKey = "BudgetPalJwtKey";
     public static readonly string DefaultJwtIssuer = "BudgetPal";
+    public static readonly string SystemUser = "BudgetPal System";
 }

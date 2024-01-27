@@ -1,9 +1,10 @@
 namespace Core.Validation;
 
-public class ValidatorResult
+public class ValidatorResult<T>
 {
-    public IDictionary<string, ICollection<string>> Results { get; set; } =
-        new Dictionary<string, ICollection<string>>();
+    public IDictionary<string, IReadOnlyCollection<string>> Results { get; set; } =
+        new Dictionary<string, IReadOnlyCollection<string>>();
 
     public bool HasViolations { get; set; } = false;
+    public T Entity { get; set; }
 }

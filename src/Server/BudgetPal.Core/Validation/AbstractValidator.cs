@@ -1,12 +1,14 @@
+using Core.Models;
+
 namespace Core.Validation;
 
 public abstract class AbstractValidator<T>
 {
     private readonly ICollection<Rule<T>> _rules = new List<Rule<T>>();
 
-    public ValidatorResult Validate(T entity)
+    public ValidatorResult<T> Validate(T entity)
     {
-        ValidatorResult results = new ValidatorResult();
+        ValidatorResult<T> results = new ValidatorResult<T>();
 
         foreach (var rule in _rules)
         {
