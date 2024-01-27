@@ -3,6 +3,7 @@ using System;
 using BudgetPal.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BudgetPal.Infrastructure.Migrations
 {
     [DbContext(typeof(BudgetPalContext))]
-    partial class BudgetPalContextModelSnapshot : ModelSnapshot
+    [Migration("20240127222538_01_add_salt_to_user")]
+    partial class _01_add_salt_to_user
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
