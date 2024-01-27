@@ -13,6 +13,6 @@ public class PostgresConnectionStringProvider : IConnectionStringProvider
         string username = Environment.GetEnvironmentVariable("DB_USERNAME") ?? "postgres";
         string password = Environment.GetEnvironmentVariable("DB_PASSWORD") ?? "postgres";
         string database = Environment.GetEnvironmentVariable("DB_DATABASE") ?? "postgres";
-        return $"Host={host};Database=${database};Username={username};Password={password}";
+        return $"Host={host};Database={database};Username={username};Password={password}";
     }
 }
