@@ -22,4 +22,5 @@
       <ProjectReference Include="..\BudgetPal.Core\BudgetPal.Core.csproj" />
     </ItemGroup>
 
+
 </Project>
