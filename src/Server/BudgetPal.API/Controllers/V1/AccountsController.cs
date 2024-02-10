@@ -1,3 +1,4 @@
+using API.Filters;
 using Core.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -5,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers.V1;
 
 [ApiController]
+[BudgetPalExceptionFilter]
 [Route("api/v1/accounts")]
 public class AccountsController : ControllerBase
 {
@@ -14,4 +16,6 @@ public class AccountsController : ControllerBase
     {
         _mediator = mediator;
     }
+    
+    
 }

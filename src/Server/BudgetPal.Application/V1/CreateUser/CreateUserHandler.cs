@@ -48,7 +48,6 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, ValidatorRes
         }
 
         var createdUser = await _createUserRepository.CreateUser(userToCreate);
-        validationResult.Entity = createdUser;
-        return validationResult;
+        return ValidatorResult<User>.Success(createdUser);
     }
 }

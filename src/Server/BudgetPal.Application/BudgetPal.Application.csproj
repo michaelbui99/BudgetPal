@@ -22,8 +22,4 @@
       <ProjectReference Include="..\BudgetPal.Infrastructure\BudgetPal.Infrastructure.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="V1\Common\" />
-    </ItemGroup>
-
 </Project>

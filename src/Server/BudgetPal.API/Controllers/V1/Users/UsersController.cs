@@ -2,6 +2,7 @@ using System.Net;
 using System.Text.Json;
 using API.Controllers.V1.Dtos;
 using API.Dtos;
+using API.Filters;
 using Application.V1.CreateUser;
 using Core.Models;
 using Core.Models.Common;
@@ -12,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers.V1;
 
 [ApiController]
+[BudgetPalExceptionFilter]
 [Route("api/v1/users")]
 public class UsersController : ControllerBase
 {
