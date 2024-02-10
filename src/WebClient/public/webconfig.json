@@ -1,0 +1,10 @@
+{
+    "api": {
+        "host": "localhost",
+        "port": {
+            "http": 8080,
+            "https": 4242
+        },
+        "https": false
+    }
+}

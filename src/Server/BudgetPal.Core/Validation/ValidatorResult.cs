@@ -7,4 +7,13 @@ public class ValidatorResult<T>
 
     public bool HasViolations { get; set; } = false;
     public T Entity { get; set; }
+
+    public static ValidatorResult<T> Success(T entity)
+    {
+        return new ValidatorResult<T>
+        {
+            HasViolations = false,
+            Entity = entity
+        };
+    }
 }

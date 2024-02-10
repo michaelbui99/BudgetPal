@@ -24,7 +24,7 @@ export const budgetSlice = createSlice({
     name: 'budget',
     initialState,
     reducers: {
-        selectBudget: (state, action: PayloadAction<Budget>) => {
+        selectBudget: (state: BudgetState, action: PayloadAction<Budget>) => {
             state.currentBudget = action.payload;
         },
     },
