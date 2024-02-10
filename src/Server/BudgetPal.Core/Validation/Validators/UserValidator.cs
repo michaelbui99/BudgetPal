@@ -8,7 +8,7 @@ public class UserValidator : AbstractValidator<User>
     public UserValidator()
     {
         // TODO: Add more rules, e.g. password length checks , dob checks etc.
-        AddRule(user => IsValidEmail(user.Email), "ValidEmail", @"Invalid Email. Email must follow pattern ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+        AddRule(user => IsValidEmail(user.Email), "InvalidEmail", @"Invalid Email. Email must follow pattern ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
     }
 
     private bool IsValidEmail(string s)

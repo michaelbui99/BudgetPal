@@ -4,6 +4,7 @@ using Core.Exceptions;
 
 namespace API.Filters;
 
+// TODO: Figure out why this does not catch any exceptions
 public class BudgetPalExceptionFilterAttribute : ExceptionFilterAttribute
 {
     public override void OnException(HttpActionExecutedContext actionExecutedContext)
@@ -15,5 +16,11 @@ public class BudgetPalExceptionFilterAttribute : ExceptionFilterAttribute
                 Content = new StringContent(err.Message)
             };
         }
+    }
+
+    public async override Task OnExceptionAsync(HttpActionExecutedContext actionExecutedContext,
+        CancellationToken cancellationToken)
+    {
+        OnException(actionExecutedContext);
     }
 }

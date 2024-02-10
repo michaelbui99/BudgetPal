@@ -7,10 +7,10 @@ using MediatR;
 
 namespace Application.V1.CreateAccount;
 
-public record AddAccountCommand
+public record CreateAccountCommand
     (Guid UserId, string Name, double InitialBalance, CurrencyCode CurrencyCode) : IRequest<ValidatorResult<Account>>;
 
-public class CreateAccountHandler : IRequestHandler<AddAccountCommand, ValidatorResult<Account>>
+public class CreateAccountHandler : IRequestHandler<CreateAccountCommand, ValidatorResult<Account>>
 {
     private readonly IUserRepository _userRepository;
     private readonly IAccountsRepository _accountsRepository;
@@ -21,7 +21,7 @@ public class CreateAccountHandler : IRequestHandler<AddAccountCommand, Validator
         _accountsRepository = accountsRepository;
     }
 
-    public async Task<ValidatorResult<Account>> Handle(AddAccountCommand request, CancellationToken cancellationToken)
+    public async Task<ValidatorResult<Account>> Handle(CreateAccountCommand request, CancellationToken cancellationToken)
     {
         User? existingUser = await _userRepository.GetById(request.UserId);
         if (existingUser is null)

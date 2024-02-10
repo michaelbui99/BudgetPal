@@ -21,8 +21,9 @@ public class EfAccountsRepository : IAccountsRepository
 
     public async Task<Account> AddAccount(Guid userId, Account account)
     {
-        var user = await _context.Users.Include(user => user.Accounts).SingleOrDefaultAsync(user => user.Id == userId);
-        user?.Accounts.Add(account);
+        var user = await _context.Users.Include(user => user.Accounts).SingleAsync(user => user.Id == userId);
+        user.Accounts.Add(account);
+        _context.Entry(user).State = EntityState.Modified;
         await _context.SaveChangesAsync();
         return account;
     }
