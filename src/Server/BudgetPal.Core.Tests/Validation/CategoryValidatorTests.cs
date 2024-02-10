@@ -8,7 +8,7 @@ namespace Core.Tests.Validation;
 public class CategoryValidatorTests
 {
     [Test]
-    public void Validate_CategoryNameIsEmpty_ResturnsResultWithSingleViolation()
+    public void Validate_CategoryNameIsEmpty_ReturnsResultWithSingleViolation()
     {
         // Arrange
         Category category = new()
