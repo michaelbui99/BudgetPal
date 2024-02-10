@@ -1,0 +1,39 @@
+name: BudgetPal Tests
+
+on:
+  pull_request:
+    branches:
+      - "main"
+    paths:
+      - src/Server/**
+  push:
+    branches:
+      - "main"
+    paths:
+      - src/Server/**
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: "7.0.x"
+
+      - name: Restore Dependencies
+        run: dotnet restore
+        working-directory: src
+
+      - name: Build
+        run: dotnet build -c Release --no-restore
+        working-directory: src
+
+      - name: Run tests
+        run: dotnet test
+        working-directory: src
+        env:
+          CI: "yes"
