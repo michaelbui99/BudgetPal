@@ -26,14 +26,14 @@ jobs:
 
       - name: Restore Dependencies
         run: dotnet restore
-        working-directory: src
+        working-directory: . 
 
       - name: Build
         run: dotnet build -c Release --no-restore
-        working-directory: src
+        working-directory: . 
 
       - name: Run tests
         run: dotnet test
-        working-directory: src
+        working-directory: . 
         env:
           CI: "yes"
